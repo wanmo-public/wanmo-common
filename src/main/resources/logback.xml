@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="false">
+    <!-- Log file path -->
+    <property name="log.path" value="${logPath:-${java.io.tmpdir:-.}}/logs" />
+
+    <!-- Project defalult level -->
+    <!-- 	<logger name="org.activiti" level="DEBUG" /> -->
+    <!-- 	<logger name="org.apache.shiro" level="DEBUG" /> -->
+
+    <!-- Project level setting -->
+    <logger name="cn.net.wanmo" level="DEBUG" />
+
+    <!-- Console log output -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{MM-dd HH:mm:ss.SSS} %-5p [%-39logger{39}] - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Level: FATAL 0  ERROR 3  WARN 4  INFO 6  DEBUG 7 -->
+    <root level="WARN">
+        <appender-ref ref="console" />
+    </root>
+</configuration>
